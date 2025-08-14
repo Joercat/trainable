@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Analytics</title><link rel="stylesheet" href="/static/styles.css"/></head>
+<body>
+<header><h1>Analytics</h1>
+<nav>
+  <a href="/">Chat</a>
+  <a href="/admin">Admin</a>
+  <a href="/data">Data</a>
+  <a href="/analytics">Analytics</a>
+</nav></header>
+<div class="container">
+  <div class="card"><canvas id="ratingsChart" class="chart"></canvas></div>
+  <div class="card"><canvas id="topQueriesChart" class="chart"></canvas></div>
+</div>
+<script src="/static/js/app.js"></script>
+<script>window.APP={page:"analytics"}</script>
+</body></html>

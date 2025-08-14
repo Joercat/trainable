@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Admin</title><link rel="stylesheet" href="/static/styles.css"/></head>
+<body>
+<header><h1>Admin</h1>
+<nav>
+  <a href="/">Chat</a>
+  <a href="/admin">Admin</a>
+  <a href="/data">Data</a>
+  <a href="/analytics">Analytics</a>
+</nav></header>
+<div class="container">
+  <div class="card">
+    <div class="grid cols-3">
+      <div><b id="kpiChats">0</b><div class="badge">Total Chats</div></div>
+      <div><b id="kpiMsgs">0</b><div class="badge">Messages</div></div>
+      <div><b id="kpiAvgRating">—</b><div class="badge">Avg Rating</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Chats</h3>
+    <div id="chats"></div>
+  </div>
+  <div class="card">
+    <h3>Messages</h3>
+    <div id="chatMessages"></div>
+  </div>
+</div>
+<script src="/static/js/app.js"></script>
+<script>window.APP={page:"admin"}</script>
+</body></html>

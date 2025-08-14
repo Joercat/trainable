@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Data</title><link rel="stylesheet" href="/static/styles.css"/></head>
+<body>
+<header><h1>Data Management</h1>
+<nav>
+  <a href="/">Chat</a>
+  <a href="/admin">Admin</a>
+  <a href="/data">Data</a>
+  <a href="/analytics">Analytics</a>
+</nav></header>
+<div class="container">
+  <div class="card">
+    <h3>Upload</h3>
+    <form id="uploadForm" class="grid cols-3">
+      <input type="file" id="file" class="input" accept=".json,.jsonl,.zip" required/>
+      <select id="ingestMode" class="input">
+        <option value="auto">Auto Extract</option>
+        <option value="jsonl">Treat as JSONL Pairs</option>
+        <option value="json">Treat as JSON</option>
+      </select>
+      <button class="btn">Upload</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Groq Synthetic Data (generation only)</h3>
+    <form id="synthForm" class="grid cols-3">
+      <textarea id="synthPrompt" class="input" placeholder="Prompt seed for synthetic data"></textarea>
+      <input type="number" id="synthN" class="input" value="10" min="1" max="300"/>
+      <button class="btn">Generate</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>N-gram Model</h3>
+    <div class="grid cols-3">
+      <button id="trainBtn" class="btn">Train N-gram</button>
+      <button id="saveBtn" class="btn secondary">Save Model</button>
+      <button id="loadBtn" class="btn secondary">Load Model</button>
+    </div>
+    <div id="trainStatus" class="badge" style="margin-top:8px"></div>
+  </div>
+  <div class="card">
+    <h3>Dataset</h3>
+    <div class="grid cols-2">
+      <button id="exportDatasetBtn" class="btn">Export JSON</button>
+      <button id="reindexBtn" class="btn secondary">Rebuild RAG Index</button>
+    </div>
+    <div id="dataRows"></div>
+  </div>
+</div>
+<script src="/static/js/app.js"></script>
+<script>window.APP={page:"data"}</script>
+</body></html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>From-Scratch AI Chat</title><link rel="stylesheet" href="/static/styles.css"/></head>
+<body>
+<header><h1>From-Scratch AI</h1>
+<nav>
+  <a href="/">Chat</a>
+  <a href="/admin">Admin</a>
+  <a href="/data">Data</a>
+  <a href="/analytics">Analytics</a>
+  <a href="/keepalive" target="_blank">Keepalive</a>
+</nav></header>
+<div class="container">
+  <div class="card">
+    <div id="messages"></div>
+    <div class="grid cols-2" style="margin-top:8px">
+      <textarea id="userInput" class="input" placeholder="Ask anything..."></textarea>
+      <div class="grid">
+        <button id="sendBtn" class="btn">Send</button>
+        <select id="rating" class="input">
+          <option value="">Rate 1–5</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+        <div class="grid cols-2">
+          <input class="input" id="maxLen" value="128"/><span class="badge">Max tokens</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/static/js/app.js"></script>
+<script>window.APP={page:"chat"}</script>
+</body></html>
