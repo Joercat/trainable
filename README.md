@@ -31,7 +31,7 @@ You can easily deploy this app on Render's free tier.
 
 ### Step 1: Push to GitHub
 
-First, make sure all your code is in a GitHub repository.
+First, make sure all your code is in a GitHub repository, likely done by forking.
 
 ### Step 2: Configure Render
 
