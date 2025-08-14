@@ -1,0 +1,15 @@
+
+<!doctype html><html><head><meta charset="utf-8"><title>Data Upload</title><link rel="stylesheet" href="/static/styles.css"></head><body>
+<h1>Upload Data</h1>
+<input type="file" id="file" />
+<button id="up">Upload</button>
+<pre id="out"></pre>
+<script>
+document.getElementById("up").onclick = async function(){
+  let f = document.getElementById("file").files[0];
+  if(!f){ alert("pick file"); return; }
+  let fd = new FormData(); fd.append("file", f);
+  let res = await fetch("/api/data/upload", {method:"POST", body: fd});
+  let j = await res.json(); document.getElementById("out").textContent = JSON.stringify(j, null, 2);
+}
+</script></body></html>

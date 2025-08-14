@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>AI Assistant</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+<div class="wrap">
+  <h1>AI Assistant — Professional</h1>
+  <div class="meta">Persona: <select id="persona"><option value="professional" selected>Professional</option><option value="casual">Casual</option></select></div>
+  <div id="chatbox" aria-live="polite"></div>
+  <form id="chatform">
+    <input id="msg" autocomplete="off" placeholder="Ask me anything — be specific for best results." />
+    <button>Send</button>
+  </form>
+  <div id="rating" style="display:none">
+    Rate: <span id="rateBtns"></span>
+  </div>
+</div>
+<script src="/static/main.js"></script>
+</body></html>
