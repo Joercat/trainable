@@ -1,0 +1,6 @@
+
+body{font-family:system-ui,Arial;background:#f6f6f6;color:#111;padding:20px}
+.wrap{max-width:720px;margin:0 auto;background:white;padding:20px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+#chatbox{height:300px;overflow:auto;border:1px solid #eee;padding:10px;margin-bottom:10px}
+.user{color: #0b6; margin:6px 0}
+.assistant{color:#06f;margin:6px 0}
