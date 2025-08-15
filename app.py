@@ -311,7 +311,7 @@ def train_start():
     with open(mp, "w", encoding="utf-8") as fh:
         json.dump(model_meta, fh)
     return jsonify({"ok":True, "pairs_used": model_meta.get("pairs_used",0), "rating_multiplier": rating_multiplier})
-@, methods=["POST"])
+@, methods=["POST"]
 @login_required
 def train_save():
     require_csrf()
